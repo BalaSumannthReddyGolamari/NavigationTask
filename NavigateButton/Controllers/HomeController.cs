@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NavigateButton.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -19,6 +20,15 @@ namespace NavigateButton.Controllers
         public ActionResult ThankYou()
         {
             return View();
+        }
+
+        public ActionResult Index()
+        {
+            EmpDept emp = new EmpDept();
+            emp.DeptName = "De1";
+            emp.Fname = "Ram";
+           
+            return View(emp);
         }
     }
 }
